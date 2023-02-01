@@ -13,7 +13,7 @@ execute as @a[scores={deaths=8}] run attribute @s minecraft:generic.max_health b
 execute as @a[scores={deaths=9}] run attribute @s minecraft:generic.max_health base set 2
 execute as @a[scores={deaths=10}] at @s run playsound minecraft:entity.wither.spawn master @a
 execute as @a[scores={deaths=10}] run gamemode spectator @s[gamemode= !spectator]
-execute as @a[scores={deaths=10}] run title @a title {"text":"Un Jugador Ha Muerto","bold":true,"color":"red"}
+execute as @a[scores={deaths=10}] run title @a title {"bold":true,"color":"dark_red","extra":[{"selector":"@p"}],"text": " Ha Muerto "}
 execute as @a[scores={deaths=10}] run scoreboard players set @s deaths 11
 execute as @a[scores={restart=1..}] at @s run function hearts:restart
 
